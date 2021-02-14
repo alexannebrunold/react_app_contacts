@@ -1,7 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Header extends Component {
-  render() {
-    return <div className='w-full h-2 bg-blue-400'> Coucou</div>
-  }
+export default function Header() {
+  return (
+    <div className='w-full h-auto bg-blue-400 p-4 text-white'>
+      <nav className='flex justify-between'>
+        <a href='/'>AppContacts</a>
+        <ul>
+          <li>
+            <a href='/' className='cursor-pointer'>
+              Accueil
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  )
 }
