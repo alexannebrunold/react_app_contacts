@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Contact from './Contact'
 
 export default class ContactList extends Component {
@@ -25,13 +25,28 @@ export default class ContactList extends Component {
     ],
   }
 
+  deleteContact = (id) => {
+    const newContacts = this.state.contacts.filter((contact) => contact.id !== id)
+    this.setState({
+      contacts: newContacts,
+    })
+  }
+
   render() {
     return (
-      <div>
+      <Fragment>
         {this.state.contacts.map((contact) => (
-          <Contact key={contact.id} nom={contact.nom} email={contact.email} tel={contact.tel} />
+          <Contact
+            key={contact.id}
+            nom={contact.nom}
+            email={contact.email}
+            tel={contact.tel}
+            deleteCurrentContact={() => {
+              this.deleteContact(contact.id)
+            }}
+          />
         ))}
-      </div>
+      </Fragment>
     )
   }
 }

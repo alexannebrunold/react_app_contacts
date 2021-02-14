@@ -11,12 +11,20 @@ export default class Contact extends Component {
     })
   }
 
+  deleteContact = () => {
+    this.props.deleteCurrentContact()
+  }
+
   render() {
     return (
       <div className='m-4 p-2 align-center border-solid border-2 border-blue-400 '>
         <h1 className='text-center font-medium'>
           {this.props.nom}
           <i className='fas fa-sort-down ml-2 cursor-pointer' onClick={this.showContact}></i>
+          <i
+            className='fas fa-times float-right text-red-600 cursor-pointer'
+            onClick={this.deleteContact}
+          ></i>
         </h1>
         {this.state.isContactShown ? (
           <div>
