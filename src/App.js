@@ -1,11 +1,11 @@
 import Header from './components/Header'
-import Contact from './components/Contact'
+import ContactList from './components/ContactList'
 
 function App() {
   return (
     <div className='App'>
       <Header />
-      <Contact />
+      <ContactList />
     </div>
   )
 }
