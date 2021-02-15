@@ -9,15 +9,13 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
-    "tailwindcss": "^2.0.3",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "npm run watch:css && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/styles.css"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -38,7 +36,6 @@
     ]
   },
   "devDependencies": {
-    "postcss": "^8.2.6",
     "postcss-cli": "^8.3.1"
   }
 }
