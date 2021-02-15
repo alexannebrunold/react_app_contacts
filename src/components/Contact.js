@@ -17,14 +17,11 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <div className='m-4 p-2 align-center border-solid border-2 border-blue-400 '>
-        <h1 className='text-center font-medium'>
+      <div className='container'>
+        <h1 className='container__header'>
           {this.props.nom}
-          <i className='fas fa-sort-down ml-2 cursor-pointer' onClick={this.showContact}></i>
-          <i
-            className='fas fa-times float-right text-red-600 cursor-pointer'
-            onClick={this.deleteContact}
-          ></i>
+          <i className='fas fa-sort-down sort__down__icon' onClick={this.showContact}></i>
+          <i className='fas fa-times delete__icon' onClick={this.deleteContact}></i>
         </h1>
         {this.state.isContactShown ? (
           <div>
